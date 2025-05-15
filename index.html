@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<!--------------------- الف سلامة عليك يا باشمهندس محمد ربنا يتمم شفائك على خير------------------------->
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./other/imgs/favicon.png ">
+ 
+ <!-- *============= Google Fonts ============= -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link
+     href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&family=Righteous&display=swap"
+     rel="stylesheet">
+
+      <!-- *============= CSS FILES ============= -->
+       
+       <link rel="stylesheet" href="./other/css/all.min.css">
+       <link rel="stylesheet" href="./other/css/bootstrap.min.css">
+       <link rel="stylesheet" href="./other/css/style.css">
+
+       <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+       <title>Weather</title>
+</head>
+<body>
+
+      
+    <!-- ?========= Start Navbar ========= -->
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container">
+          <a class="navbar-brand" href="">
+            <img width="64" height="64" src="https://img.icons8.com/laces/64/C850F2/cloud.png" alt="cloud"/>
+              <div class="logo-info d-inline-block align-middle">
+                  <h1 class="site-title">Weather</h1>
+                  <span class="site-description">tagline goes here</span>
+              </div>
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span> 
+              
+          </button>
+          <div class="collapse navbar-collapse mt-4 my-lg-0" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                  <li class="nav-item"><a class="nav-link" href=''>Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="">News</a></li>
+                  <li class="nav-item"><a class="nav-link" href="">Live cameras</a></li>
+                  <li class="nav-item"><a class="nav-link" href="">Photos</a></li>
+                  <li class="nav-item"><a class="nav-link" href=''>Contact</a></li>
+                  <button id="toggleMode" class="btn btn-sm fw-bold" style=" color: rgb(172, 100, 179)">🌓 Dark Mode</button>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+  <!-- ?========= Start hero ========= -->
+  <section class="hero ">
+      <div class=" container">
+          <form class="find-form position-relative">
+              <input id="findInput" class="form-control w-100" type="text" placeholder="Find your location...">
+
+              <button id="btnFind" class=" btn-find position-absolute" type="button">search</button>
+          </form>
+      </div>
+  </section>
+  <!-- ddd -->
+  <div class="forecast-table">
+      <div class="container">
+          <div id="forecast" class="row  rounded-3 forecast-container">
+              <!--^ today -->
+              <div class="col-lg-4">
+                  <div class=" forecast today rounded  rounded-3">
+                      <div id="today" class="forecast-header px-3  d-flex justify-content-between">
+                          <div class="day fw-semibold"></div>
+                          <div class="date text-light"></div>
+                      </div>
+                      <div id="current" class="forecast-content  px-3">
+                          <div class="location fs-4"></div>
+                          <div class="time me-auto"></div>
+                          <div class="degree d-flex justify-content-between">
+                              <div class="num"></div>
+                              <div class="forecast-icon align-self-end"> 
+                              
+                              </div>
+                          </div>
+                          <p class="custom fs-5"></p>
+                          <div class=" mt-4 d-flex justify-content-between">  </div>
+                      </div>
+                  </div>
+              </div>
+              <!--^ tomorrow -->
+              <div id="tomorrow" class="col-lg-4 mt-3 mt-lg-0">
+                  <div class="text-center h-100 rounded-2 forecast tomorrow">
+                      <div class="forecast-header fw-semibold px-3">
+                          <div class="day"></div>
+                      </div>
+                      <div class="forecast-content px-3">
+                          <div class="forecast-icon">
+                          </div>
+                          <div class="degree fs-2"></div>
+                          <p class="fs-5 mb-0"></p>
+                          <p class="custom fs-5"></p>
+                      </div>
+                  </div>
+              </div>
+              <!--^ afterTomorrow -->
+              <div id="afterTomorrow" class="col-lg-4 mt-3 mt-lg-0">
+                  <div class="text-center h-100 rounded-2 forecast">
+                      <div class="forecast-header fw-semibold px-3">
+                          <div class="day"></div>
+                      </div>
+                      <div class="forecast-content px-3">
+                          <div class="forecast-icon"></div>
+                          <div class="degree fs-2"></div>
+                          <p class="fs-5 mb-0"></p>
+                          <p class="custom fs-5"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+  
+  <!-- ?========= Start Footer ========= -->
+  <footer class="footer">
+      <div class="container">
+          <div class="row flex-column flex-md-row align-items-center mb-3">
+              <div class="col-lg-8 ">
+                  <form class="subscribe-form position-relative">
+                      <input id="subscribeInput" class="form-control w-100" type="text"
+                          placeholder="Enter your email to subscribe...">
+                      <button id="btnSubscribe" class=" btn-find position-absolute" type="button">Subscribe</button>
+                  </form>
+              </div>
+              <div class="col-lg-3  d-flex justify-content-center ms-lg-auto  mt-lg-0 pt-lg-5">
+                  <div class="social-links">
+                      <a href="#" class=""><i class="fa-brands fa-facebook-f"></i></a>
+                      <a href="#" class=""><i class="fa-brands fa-twitter"></i></a>
+                      <a href="#" class=""><i class="fa-brands fa-google-plus"></i></a>
+                      <a href="#" class=""><i class="fa-brands fa-pinterest"></i></a>
+                  </div>
+              </div>
+          </div>
+  
+          <p class="fs-5 text-center text-success-emphasis ">Copyright 2025 Company name.Designed by <span>
+            <a class="text-black" href="https://www.instagram.com/mo_medhat25/" style="text-decoration: none;">mohamed medhat</a>
+          </span>
+          All rights
+              reserved</p>
+      </div>
+  </footer> 
+  <!-- *============= JS FILES ============= -->
+  <script src="other/js/inedx.js"></script>
+  </body>
+  
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
